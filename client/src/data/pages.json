@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Home",
+    "subtitle": "Welcome to my website! I created this page, to present my portfolio and all the information about myself and my career.",
+    "component": "home",
+    "iconName": "house"
+  },
+  {
+    "title": "AboutMe",
+    "subtitle": "This is a little introduction, and some information about me.",
+    "component": "aboutMe",
+    "iconName": "info"
+  },
+  {
+    "title": "Projects",
+    "subtitle": "Here you can see the projects I worked on.",
+    "component": "projects",
+    "iconName": "folder"
+  },
+  {
+    "title": "Fields",
+    "subtitle": "In this section below, you can see all the fields I interested in.",
+    "component": "fields",
+    "iconName": "list"
+  },
+  {
+    "title": "Posts",
+    "subtitle": "Here you can see my posts about exciting content that I like.",
+    "component": "posts",
+    "iconName": "message"
+  }
+]

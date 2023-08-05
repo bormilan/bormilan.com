@@ -1,0 +1,22 @@
+[
+  {
+    "headline": "An introduction about me",
+    "text": "In this section, you can read about my career, my life and overall about me.",
+    "imageName": "tkProfilePicture"
+  },
+  {
+    "headline": "A list of my projects",
+    "text": "In this section you can see my selected project that I am proud of.",
+    "imageName": "projects"
+  },
+  {
+    "headline": "Which fields am I interested in ?",
+    "text": "This section covers all the fields I have experience in it, and some fields that I am interested but not worked in yet.",
+    "imageName": "fields"
+  },
+  {
+    "headline": "Posts written by me.",
+    "text": "This is a blog page, I am enjoying exploring new things and dig deep into it, so I started writing about them, so why not to post ?",
+    "imageName": "posts"
+  }
+]
