@@ -1,19 +1,27 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 
 import { IPage } from "../types";
-import { getIconByName } from "../static";
+import { getIconByName, textColor } from "../static";
 
 type Props = {
   page: IPage;
 };
 
 export default function MainTitle({ page }: Props) {
+  const isBelowSmall = useMediaQuery("(max-width:600px)");
+  const isBelowMedium = useMediaQuery("(max-width:800px)");
+
+  const marginLeft = isBelowMedium ? 2 : 5;
+  const marginTop = isBelowMedium ? 5 : 0;
+  const titleMargin = isBelowMedium ? 1 : 5;
+  const width = isBelowSmall ? "55%" : "80%";
+
   return (
     <Grid
       display="flex"
       flexDirection="column"
       justifyContent="center"
-      sx={{ width: "80%", ml: 5 }}
+      sx={{ width: width, ml: marginLeft, mt: marginTop }}
     >
       <Grid
         display="flex"
@@ -21,14 +29,14 @@ export default function MainTitle({ page }: Props) {
         alignItems="center"
         sx={{ height: "30%" }}
       >
-        {page.icon}
-        <Typography variant="h4" color="white" sx={{ ml: 5 }}>
+        {getIconByName(page.iconName)}
+        <Typography variant="h4" color={textColor} sx={{ ml: titleMargin }}>
           {page.title}
         </Typography>
       </Grid>
       <Typography
         variant="subtitle1"
-        color="white"
+        color={textColor}
         sx={{ mt: 1, textDecoration: "underline" }}
       >
         {page.subtitle}

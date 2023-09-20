@@ -1,0 +1,46 @@
+[
+  {
+    "headline": "Education:",
+    "texts": [
+      "I graduated at Budapest University of Technologies and Economics.",
+      "My major was Computer Engineering, and my specialization was Data Science."
+    ],
+    "imageName": "bme",
+    "config": {
+      "wrap": "mobile"
+    }
+  },
+  {
+    "headline": "Experience:",
+    "texts": [
+      "[2021.jul - 2022.feb][L&M Solutions] Backend Developer internship",
+      "[2022.feb - still working][BME-AUT Industry 4.0 Technology Centre] Computer Vision Engineer, Full Stack Developer - Junior",
+      "[2022.feb - 2023.feb][Freelance, marminalunk.com & some smaller projects] - Backend Developer",
+      "[2023.feb - 2023.jul][Freelance, Beam.live] - Frontend Developer - Junior"
+    ]
+  },
+  {
+    "headline": "Hobbies:",
+    "texts": [
+      "In my spare time a like to learn new things, like a new image processing technique, a new database or some system designing concepts. ",
+      "I played basketball for 13 years when I was young, and the love of the game remained in me. So I like to watch NBA games, analyze the data of the games and players.",
+      "I also like meeting with my friends, playing board games, camping or go to meetups."
+    ]
+  },
+  {
+    "headline": "Languages and Other Skills:",
+    "texts": [
+      "Hungarian - Native",
+      "English - Intermediate",
+      "Python - Intermediate",
+      "Typescript - Intermediate",
+      "Full Stack Web Development - Intermediate",
+      "Machine Learning - Beginner",
+      "Computer Vision - Beginner"
+    ],
+    "imageName": "profile",
+    "config": {
+      "wrap": "mobile"
+    }
+  }
+]

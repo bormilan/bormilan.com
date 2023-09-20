@@ -1,12 +1,12 @@
-import { Grid } from "@mui/material";
+import { Divider, Grid, useMediaQuery } from "@mui/material";
 import { createContext, useState } from "react";
 import MainMenu from "./MainMenu";
 import MainTitle from "./MainTitle";
-import Home from "./Pages/Home";
 
 import pagesJson from "../data/pages.json";
-import { getIconByName, getPageByName } from "../static";
-import { IPage, IPageJson } from "../types";
+import { textColor } from "../static";
+import { IPage } from "../types";
+import Page from "./Page";
 
 export const SelectContext = createContext<{
   selected: IPage;
@@ -14,21 +14,20 @@ export const SelectContext = createContext<{
   pages: IPage[];
 }>({
   selected: {} as IPage,
-  setSelected: () => {},
+  setSelected: () => { },
   pages: [],
 });
 
 export default function Main() {
-  const pages: IPage[] = pagesJson.map((page: IPageJson) => {
-    return {
-      title: page.title,
-      subtitle: page.subtitle,
-      component: getPageByName(page.component),
-      icon: getIconByName(page.iconName),
-    } as IPage;
-  }) as IPage[];
+  const pages: IPage[] = pagesJson;
 
   const [selected, setSelected] = useState<IPage>(pages[0]);
+
+  const isBelowMedium = useMediaQuery("(max-width:800px)");
+  const isBelowLarge = useMediaQuery("(max-width:1200px)");
+
+  const dividerMarginRight = isBelowLarge ? 1 : isBelowMedium ? 1 : 3;
+  const dividerMarginLeft = isBelowLarge ? 1 : isBelowMedium ? 1 : 3;
 
   return (
     <SelectContext.Provider
@@ -42,7 +41,7 @@ export default function Main() {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        sx={{ width: "100%" }}
+        sx={{ height: "100%", width: "100%" }}
       >
         <Grid
           display="flex"
@@ -50,9 +49,19 @@ export default function Main() {
           sx={{ height: "200px", width: "100%" }}
         >
           <MainTitle page={selected} />
+          <Divider
+            color={textColor}
+            variant="middle"
+            orientation="vertical"
+            sx={{
+              marginRight: dividerMarginRight,
+              marginLeft: dividerMarginLeft,
+              marginTop: 3.5,
+            }}
+          />
           <MainMenu />
         </Grid>
-        {selected.component}
+        <Page page={selected} />
       </Grid>
     </SelectContext.Provider>
   );

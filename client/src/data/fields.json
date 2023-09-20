@@ -1,0 +1,66 @@
+[
+  {
+    "headline": "Computer Vision, Image Processing",
+    "texts": [
+      "Computer Vision is the field that I am most interested in.",
+      "I think this is an interesting field, it has a lot of potential in it. My favorite topics are segmentation, object detection and tracking.",
+      "I made variable projects in these topics, and Im always open for consume content and discussion about this field."
+    ],
+    "imageName": "cv",
+    "config": {
+      "wrap": "mobile"
+    }
+  },
+  {
+    "headline": "Web Development",
+    "texts": [
+      "This is the field that I have the most experience.",
+      "Im working as a full stack web developer since 2021, and a have experience in various stacks. For example python-flask, .Net, React with Typescript, or GO Fiber.",
+      "Im always interested in topics related this field, and Im always open for learning new topics in it."
+    ],
+    "imageName": "webdev",
+    "config": {
+      "wrap": "mobile"
+    }
+
+  },
+  {
+    "headline": "Data Science",
+    "texts": [
+      "I learned data science at university and I really liked it.",
+      "I made several project, like sport analytics, web scraping and time series analysis.",
+      "I like every topic in this field, especially that topics that are more close to programming and engineering. Im not a big fan of visualization and topics like this."
+    ],
+    "imageName": "-",
+    "config": {
+      "wrap": "mobile"
+    }
+
+  },
+  {
+    "headline": "Web3",
+    "texts": [
+      "Im highly interested in web3 topics, but I have not much experience in it.",
+      "I made a smart contract project back in the day at university, and I highly enjoyed it.",
+      "Im always open for discussion about this field, and Im open for projects that can give me some experience."
+    ],
+    "imageName": "-",
+    "config": {
+      "wrap": "mobile"
+    }
+
+  },
+  {
+    "headline": "Databases",
+    "texts": [
+      "Im a big data guy, I like data science, AI and of course data storing and managing in general.",
+      "I have a lot of experience in SQL databases and in the last year I started working with NoSql databases like MongoDB or Redis.",
+      "Im really like to talk about best practices and trick about boost performance when dealing with big/unstructured data."
+    ],
+    "imageName": "-",
+    "config": {
+      "wrap": "mobile"
+    }
+
+  }
+]

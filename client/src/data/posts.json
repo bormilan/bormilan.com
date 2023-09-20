@@ -1,0 +1,40 @@
+[
+  {
+    "headline": "2023.09.17. - Project Kickoff: Drowning Detection in Lakes",
+    "texts": [
+      "So Im starting a new project. This project is about to prevent people drowning in lakes.",
+      "The idea is to make a model that detects the people in the water. After the people are detected, we can track how many people are in each region of the picture.",
+      "By separating the image into small regions, we can "
+    ],
+    "imageName": "",
+    "onClick": {
+      "type": "post",
+      "index": "drowningDetection"
+    },
+    "stamps": [
+      {
+        "type": "",
+        "text": "Computer Vision"
+      },
+      {
+        "type": "",
+        "text": "Image Processing"
+      },
+      {
+        "type": "",
+        "text": "Data Collection"
+      },
+      {
+        "type": "",
+        "text": "Deep Learning"
+      },
+      {
+        "type": "",
+        "text": "Algorithms"
+      }
+    ],
+    "config": {
+      "wrap": "mobile"
+    }
+  }
+]

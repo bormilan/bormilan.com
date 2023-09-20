@@ -1,0 +1,125 @@
+import { Box, Divider, Grid, Typography, useMediaQuery } from "@mui/material";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { getImageByName, getSection, textColor } from "../static";
+import { IPage, ISection } from "../types";
+import { SelectContext } from "./Main";
+
+type pageProps = {
+  page: IPage;
+};
+
+export default function Page({ page }: pageProps) {
+  const sections: ISection[] = getSection(page.sectionName);
+
+  return (
+    <div className="page">
+      <Typography variant="h5" color={textColor}>
+        {page.headline}
+      </Typography>
+      <Divider color={textColor} variant="middle" sx={{ margin: "15px" }} />
+      <div className="section-container">
+        {sections &&
+          sections.map((section: ISection, i) => (
+            <Section key={i} section={section} index={i + 1} />
+          ))}
+      </div>
+    </div>
+  );
+}
+
+type sectionProps = {
+  section: ISection;
+  index: number;
+};
+
+export function Section({ section, index }: sectionProps) {
+  const { setSelected, pages } = useContext(SelectContext);
+
+  const isBelowSmall = useMediaQuery("(max-width:700px)");
+  const isBelowMedium = useMediaQuery("(max-width:1000px)");
+
+  const sectionHeight = isBelowSmall ? "180px" : "100px";
+  const imageSize = isBelowSmall ? "100px" : "200px";
+  const justifyContent = isBelowSmall ? "center" : "space-between";
+
+  const navigate = useNavigate();
+
+  //TODO: refactor this
+  const wrap =
+    section.config?.wrap === "mobile" && isBelowMedium ? "wrap" : "nowrap";
+
+  function handleClick() {
+    if (!section.onClick) {
+      return undefined;
+    }
+    if (section.onClick.type === "page") {
+      const intIndex = parseInt(section.onClick.index);
+      setSelected(pages[intIndex]);
+    }
+    if (section.onClick.type === "post") {
+      navigate(`/post/${section.onClick.index}`);
+    }
+    //TODO: else if for the other options
+  }
+
+  return (
+    <Box display="flex" flexDirection="column" marginTop="20px">
+      <div
+        className="section"
+        onClick={handleClick}
+        style={{
+          flexWrap: wrap as "wrap" | "nowrap",
+          justifyContent: justifyContent,
+        }}
+      >
+        <Grid display="flex" flexDirection="column">
+          <Typography variant="h6" color={textColor} marginBottom="5px">
+            {section.headline}
+          </Typography>
+          {section.texts.map((text, i) => (
+            <Typography
+              key={i}
+              variant="body1"
+              color={textColor}
+              m="5px"
+              ml="15px"
+            >
+              {text}
+            </Typography>
+          ))}
+        </Grid>
+        {section.imageName && (
+          <div style={{ height: imageSize }}>
+            {getImageByName(section.imageName)}
+          </div>
+        )}
+      </div>
+      <Box
+        display="flex"
+        flexDirection="row"
+        justifyContent="flex-start"
+        flexWrap="wrap"
+        sx={{ width: "70%" }}
+      >
+        {section.stamps &&
+          section.stamps.map((stamp, i) => (
+            <Box
+              key={i}
+              sx={{
+                backgroundColor: textColor,
+                color: "0c0c0c",
+                padding: 1,
+                borderRadius: "10px",
+                opacity: "0.6",
+                marginLeft: "10px",
+                marginTop: "5px",
+              }}
+            >
+              {stamp.text}
+            </Box>
+          ))}
+      </Box>
+    </Box>
+  );
+}

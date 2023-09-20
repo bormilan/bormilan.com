@@ -13,11 +13,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import quotesJSON from "../data/quotes.json";
 import contactDataJSON from "../data/contact_data.json";
+import { textColor } from "../static";
 
 export default function Head() {
-  const theme = useTheme();
-  const isBelowMedium = useMediaQuery("(min-width:905px)");
-  const isBelowsmall = useMediaQuery("(min-width:590px)");
+  const isBelowMedium = useMediaQuery("(min-width:1200px)");
   const isBelow1100 = useMediaQuery("(max-width:1150px)");
 
   const quoteIndex = Math.floor(
@@ -26,10 +25,6 @@ export default function Head() {
   const quote = quotesJSON[quoteIndex];
 
   const { email, phoneNumber, location } = contactDataJSON;
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}`;
-  };
 
   return (
     <>
@@ -46,17 +41,17 @@ export default function Head() {
             </Tooltip>
           </Grid>
           <Grid sx={{ paddingRight: 2, width: "60%" }}>
-            <Typography variant="h2" color="white">
+            <Typography variant="h2" color={textColor}>
               Bór Milán
             </Typography>
-            <Typography variant="subtitle1" color="white">
+            <Typography variant="subtitle1" color={textColor}>
               Web Developer, Computer Vision Engineer
             </Typography>
             <Typography
               variant="body2"
               sx={{
                 fontStyle: "italic",
-                color: "white",
+                color: textColor,
                 fontSize: isBelow1100 ? 10 : 11,
               }}
             >
@@ -70,28 +65,28 @@ export default function Head() {
             alignItems="flex-end"
             sx={{ width: "35%", paddingRight: 3 }}
           >
-            <Grid
+            {/* <Grid
               display="flex"
               flexDirection="row"
               justifyContent="space-between"
               sx={{ width: "100%" }}
             >
-              <PhoneIcon sx={{ color: "white" }} />
-              <Typography color="white">
-                <a style={{ color: "white" }} href={`tel:${phoneNumber}`}>
+              <PhoneIcon sx={{ color: textColor }} />
+              <Typography color={textColor}>
+                <a style={{ color: textColor }} href={`tel:${phoneNumber}`}>
                   {phoneNumber}
                 </a>
               </Typography>
-            </Grid>
+            </Grid> */}
             <Grid
               display="flex"
               flexDirection="row"
               justifyContent="space-between"
               sx={{ width: "100%" }}
             >
-              <EmailIcon sx={{ color: "white" }} />
-              <Typography color="white">
-                <a href={`mailto:${email}`} style={{ color: "white" }}>
+              <EmailIcon sx={{ color: textColor }} />
+              <Typography color={textColor}>
+                <a href={`mailto:${email}`} style={{ color: textColor }}>
                   {email}
                 </a>
               </Typography>
@@ -102,8 +97,8 @@ export default function Head() {
               justifyContent="space-between"
               sx={{ width: "100%" }}
             >
-              <LocationOnIcon sx={{ color: "white" }} />
-              <Typography color="white">{location}</Typography>
+              <LocationOnIcon sx={{ color: textColor }} />
+              <Typography color={textColor}>{location}</Typography>
             </Grid>
           </Grid>
         </Grid>
@@ -116,13 +111,59 @@ export default function Head() {
               className="profile-picture-small"
               style={{ padding: 10 }}
             />
-            <Grid sx={{ paddingRight: 2 }}>
-              <Typography variant={isBelowMedium ? "h2" : "h3"} color="white">
+            <Grid sx={{ paddingRight: 2, width: "100%" }}>
+              <Typography
+                variant={isBelowMedium ? "h2" : "h3"}
+                color={textColor}
+              >
                 Bór Milán
               </Typography>
-              <Typography variant="subtitle2" color="white">
+              <Typography variant="subtitle2" color={textColor}>
                 Web Developer, Computer Vision Engineer
               </Typography>
+              <Grid
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="flex-end"
+                sx={{ width: "100%", paddingRight: 3 }}
+              >
+                {/* <Grid
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  sx={{ width: "100%" }}
+                >
+                  <PhoneIcon sx={{ color: textColor }} />
+                  <Typography color={textColor}>
+                    <a style={{ color: textColor }} href={`tel:${phoneNumber}`}>
+                      {phoneNumber}
+                    </a>
+                  </Typography>
+                </Grid> */}
+                <Grid
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  sx={{ width: "100%" }}
+                >
+                  <EmailIcon sx={{ color: textColor }} />
+                  <Typography color={textColor}>
+                    <a href={`mailto:${email}`} style={{ color: textColor }}>
+                      {email}
+                    </a>
+                  </Typography>
+                </Grid>
+                <Grid
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  sx={{ width: "100%" }}
+                >
+                  <LocationOnIcon sx={{ color: textColor }} />
+                  <Typography color={textColor}>{location}</Typography>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
