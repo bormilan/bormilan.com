@@ -56,11 +56,11 @@ export function Section({ section, index }: sectionProps) {
     if (section.onClick.type === "page") {
       const intIndex = parseInt(section.onClick.index);
       setSelected(pages[intIndex]);
-    }
-    if (section.onClick.type === "post") {
+    } else if (section.onClick.type === "post") {
       navigate(`/post/${section.onClick.index}`);
+    } else if (section.onClick.type === "link") {
+      window.open(section.onClick.index, "_blank");
     }
-    //TODO: else if for the other options
   }
 
   return (

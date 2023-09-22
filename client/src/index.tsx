@@ -9,6 +9,8 @@ import {
   RouterProvider,
   useLocation,
   useRouteError,
+  HashRouter,
+  Routes,
 } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
 import ErrorIcon from "@mui/icons-material/Error";
@@ -95,23 +97,20 @@ function ErrorPage() {
   );
 }
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
+const router = (
+  <HashRouter>
+    <Routes>
       <Route path="*" element={<Navigate to="/main" replace />} />
       <Route element={<App />} errorElement={<ErrorPage />}>
         <Route path="main" element={<Main />} />
         <Route path="post/:name" element={<Post />} />
       </Route>
-    </>,
-  ),
+    </Routes>
+    ,
+  </HashRouter>
 );
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-);
+root.render(<React.StrictMode>{router}</React.StrictMode>);

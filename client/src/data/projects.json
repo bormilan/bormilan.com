@@ -47,7 +47,10 @@
       "Our plan, is to make a dashboard that is customizable by the user. Making a mobile application to afford the possibility to make the images with phone And we want to make a lot of features that supports those people who has multiply property to monitor the consumption of their renters."
     ],
     "imageName": "cm_img",
-    "onClick": "",
+    "onClick": {
+      "type": "link",
+      "index": ""
+    },
     "stamps": [
       {
         "type": "",
