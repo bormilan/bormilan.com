@@ -36,6 +36,10 @@ import cm_img from "./images/cm_img.png";
 import marminalunk from "./images/marminalunk.png";
 //@ts-ignore
 import dd1 from "./images/dd1.png";
+//@ts-ignore
+import drowning_cover from "./images/drowning_cover.png";
+//@ts-ignore
+import react_markdown_cover from "./images/react_markdown_cover.png";
 
 import homeSectionsJson from "./data/home_sections.json";
 import aboutSectionsJson from "./data/about_sections.json";
@@ -72,6 +76,8 @@ const imageComponents: { [name: string]: any } = {
   cm_img: <img src={cm_img} height="100%" />,
   marminalunk: <img src={marminalunk} height="100%" />,
   dd1: <img src={dd1} height="100%" />,
+  drowning_cover: <img src={drowning_cover} height="100%" />,
+  react_markdown_cover: <img src={react_markdown_cover} height="100%" />,
 };
 
 export function getImageByName(name: string) {

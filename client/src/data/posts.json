@@ -6,7 +6,7 @@
       "The idea is to make a model that detects the people in the water. After the people are detected, we can track how many people are in each region of the picture.",
       "By separating the image into small regions, we can "
     ],
-    "imageName": "",
+    "imageName": "drowning_cover",
     "onClick": {
       "type": "post",
       "index": "drowningDetection"
@@ -31,6 +31,40 @@
       {
         "type": "",
         "text": "Algorithms"
+      }
+    ],
+    "config": {
+      "wrap": "mobile"
+    }
+  },
+  {
+    "headline": "2023.09.23. - How to render markdown files dynamically in react.ts",
+    "texts": [
+      "I just made this feature to my personal web page, that I can post content the way that I need to only make a new object in my 'posts.json' and drag a markdown file into my posts folder.",
+      "I faced some problem and I didnt found a good article that covers all the information about this topic, so I came up with the idea to make my own.",
+      "If you are interested in how I implemented this, and how I solved the little frustrating problems, or/and you want to make a similar feature on  your site, enjoy this article."
+    ],
+    "imageName": "react_markdown_cover",
+    "onClick": {
+      "type": "post",
+      "index": "markdownWithReact"
+    },
+    "stamps": [
+      {
+        "type": "",
+        "text": "Web Development"
+      },
+      {
+        "type": "",
+        "text": "Software Design"
+      },
+      {
+        "type": "",
+        "text": "Markdown"
+      },
+      {
+        "type": "",
+        "text": "Tutorial"
       }
     ],
     "config": {

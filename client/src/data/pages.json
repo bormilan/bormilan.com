@@ -4,34 +4,39 @@
     "headline": "Here you can see all the features of this site:",
     "subtitle": "Welcome to my website! I created this page, to present my portfolio and all the information about myself and my career.",
     "iconName": "house",
-    "sectionName": "home_sections"
+    "sectionName": "home_sections",
+    "sectionOrder": "column"
   },
   {
     "title": "AboutMe",
     "headline": "Hi, welcome to my personal website! I am Milán, I am a Programmer.",
     "subtitle": "This is a little introduction, and some information about me.",
     "iconName": "info",
-    "sectionName": "about_sections"
+    "sectionName": "about_sections",
+    "sectionOrder": "column"
   },
   {
     "title": "Projects",
     "headline": "This is the repository of my projects that I worked on.",
     "subtitle": "Here you can see the projects I worked on.",
     "iconName": "folder",
-    "sectionName": "projects"
+    "sectionName": "projects",
+    "sectionOrder": "column"
   },
   {
     "title": "Fields",
     "headline": "In this page, I want to gather all the information about which fields am I interested in, and which fields have I experience.",
     "subtitle": "In this section below, you can see all the fields I interested in.",
     "iconName": "list",
-    "sectionName": "fields"
+    "sectionName": "fields",
+    "sectionOrder": "column"
   },
   {
     "title": "Posts",
     "headline": "In this page, you can see all the public posts that I made so far.",
     "subtitle": "Here you can see my posts about exciting content that I like.",
     "iconName": "message",
-    "sectionName": "posts"
+    "sectionName": "posts",
+    "sectionOrder": "column-reverse"
   }
 ]

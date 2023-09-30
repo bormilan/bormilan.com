@@ -1,13 +1,17 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 
-import { IPage } from "../types";
 import { getIconByName, textColor } from "../static";
+import { IPage } from "../types";
+import { pages } from "./Main";
 
 type Props = {
-  page: IPage;
+  pageId: string;
 };
 
-export default function MainTitle({ page }: Props) {
+export default function MainTitle({ pageId }: Props) {
+  const page: IPage | undefined = pages.find(
+    (page: IPage) => page.title === pageId,
+  );
   const isBelowSmall = useMediaQuery("(max-width:600px)");
   const isBelowMedium = useMediaQuery("(max-width:800px)");
 
@@ -15,6 +19,10 @@ export default function MainTitle({ page }: Props) {
   const marginTop = isBelowMedium ? 5 : 0;
   const titleMargin = isBelowMedium ? 1 : 5;
   const width = isBelowSmall ? "55%" : "80%";
+
+  if (!page) {
+    return <>no page found</>;
+  }
 
   return (
     <Grid

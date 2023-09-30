@@ -83,11 +83,6 @@ body {
   }
 }
 
-.section-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .section {
   display: flex;
   flex-direction: row;

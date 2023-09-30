@@ -1,18 +1,22 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import { IPage } from "../types";
 import { useContext } from "react";
 import { SelectContext } from "./Main";
 import { textColor } from "../static";
+import { useNavigate } from "react-router-dom";
 
 export default function MainMenu() {
-  const { selected, setSelected, pages } = useContext(SelectContext);
+  const { selected, pages } = useContext(SelectContext);
+  const navigate = useNavigate();
 
   const isBelowMedium = useMediaQuery("(max-width:800px)");
 
-  const titleFontSize = isBelowMedium ? 18 : 28;
   const containerWidth = isBelowMedium ? "30%" : "20%";
+
+  function handleClick(title: string) {
+    navigate(`/main/page/${title}`);
+  }
 
   return (
     <Grid
@@ -28,10 +32,10 @@ export default function MainMenu() {
       {pages.map((page: IPage) => (
         <div
           key={page.title}
-          onClick={() => setSelected(page)}
+          onClick={() => handleClick(page.title)}
           className="page-menu"
         >
-          {selected.title === page.title ? (
+          {selected === page.title ? (
             <ArrowForwardIosIcon sx={{ color: textColor }} />
           ) : null}
           <Typography variant="h5" color={textColor}>

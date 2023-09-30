@@ -11,6 +11,7 @@ export interface IPage {
   subtitle: string;
   iconName: string;
   sectionName: string;
+  sectionOrder: string;
 }
 
 export interface ISection {
@@ -34,24 +35,4 @@ export interface IStamp {
 
 export interface ISectionConfig {
   wrap: "wrap" | "nowrap" | "mobile" | "fullscreen";
-}
-
-export interface IPost {
-  title: string;
-  paragraphs: IParagraph[];
-  footer: {
-    date: string;
-    message: string;
-    link: string;
-  };
-}
-
-export interface IParagraph {
-  text: string;
-  image: string;
-  textConfig: any;
-  imageConfig: {
-    position: string;
-    size: number;
-  };
 }

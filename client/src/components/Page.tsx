@@ -1,15 +1,24 @@
 import { Box, Divider, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getImageByName, getSection, textColor } from "../static";
 import { IPage, ISection } from "../types";
-import { SelectContext } from "./Main";
+import { pages, SelectContext } from "./Main";
 
-type pageProps = {
-  page: IPage;
-};
+export default function Page() {
+  const { name } = useParams();
+  const page: IPage | undefined = pages.find(
+    (page: IPage) => page.title === name,
+  );
 
-export default function Page({ page }: pageProps) {
+  const { setSelected } = useContext(SelectContext);
+
+  if (!page) {
+    return <>no page found</>;
+  }
+
+  setSelected(name!);
+
   const sections: ISection[] = getSection(page.sectionName);
 
   return (
@@ -18,28 +27,27 @@ export default function Page({ page }: pageProps) {
         {page.headline}
       </Typography>
       <Divider color={textColor} variant="middle" sx={{ margin: "15px" }} />
-      <div className="section-container">
+      <Box
+        display="flex"
+        flexDirection={page.sectionOrder as "column" | "column-reverse"}
+      >
         {sections &&
           sections.map((section: ISection, i) => (
-            <Section key={i} section={section} index={i + 1} />
+            <Section key={i} section={section} />
           ))}
-      </div>
+      </Box>
     </div>
   );
 }
 
 type sectionProps = {
   section: ISection;
-  index: number;
 };
 
-export function Section({ section, index }: sectionProps) {
-  const { setSelected, pages } = useContext(SelectContext);
-
+export function Section({ section }: sectionProps) {
   const isBelowSmall = useMediaQuery("(max-width:700px)");
   const isBelowMedium = useMediaQuery("(max-width:1000px)");
 
-  const sectionHeight = isBelowSmall ? "180px" : "100px";
   const imageSize = isBelowSmall ? "100px" : "200px";
   const justifyContent = isBelowSmall ? "center" : "space-between";
 
@@ -54,8 +62,7 @@ export function Section({ section, index }: sectionProps) {
       return undefined;
     }
     if (section.onClick.type === "page") {
-      const intIndex = parseInt(section.onClick.index);
-      setSelected(pages[intIndex]);
+      navigate(`/pages/${section.onClick.index}`);
     } else if (section.onClick.type === "post") {
       navigate(`/post/${section.onClick.index}`);
     } else if (section.onClick.type === "link") {
@@ -73,7 +80,7 @@ export function Section({ section, index }: sectionProps) {
           justifyContent: justifyContent,
         }}
       >
-        <Grid display="flex" flexDirection="column">
+        <Grid display="flex" flexDirection={"column"}>
           <Typography variant="h6" color={textColor} marginBottom="5px">
             {section.headline}
           </Typography>

@@ -2,12 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
   Navigate,
   Route,
-  RouterProvider,
-  useLocation,
   useRouteError,
   HashRouter,
   Routes,
@@ -16,6 +12,7 @@ import { Typography, Box } from "@mui/material";
 import ErrorIcon from "@mui/icons-material/Error";
 import Main from "./components/Main";
 import Post from "./components/Post";
+import Page from "./components/Page";
 
 export class DetailedError extends Error {
   override name: "DetailedError" = "DetailedError";
@@ -40,7 +37,6 @@ export class ResponseError extends Error {
 
 function ErrorPage() {
   const error = useRouteError();
-  console.error(error);
 
   let content: React.ReactNode | null = null;
   let details: React.ReactNode | null = null;
@@ -100,9 +96,11 @@ function ErrorPage() {
 const router = (
   <HashRouter>
     <Routes>
-      <Route path="*" element={<Navigate to="/main" replace />} />
+      <Route path="*" element={<Navigate to="/main/page/Home" replace />} />
       <Route element={<App />} errorElement={<ErrorPage />}>
-        <Route path="main" element={<Main />} />
+        <Route path="main" element={<Main />}>
+          <Route path="page/:name" element={<Page />} />
+        </Route>
         <Route path="post/:name" element={<Post />} />
       </Route>
     </Routes>

@@ -6,22 +6,22 @@ import MainTitle from "./MainTitle";
 import pagesJson from "../data/pages.json";
 import { textColor } from "../static";
 import { IPage } from "../types";
-import Page from "./Page";
+import { Outlet } from "react-router-dom";
 
 export const SelectContext = createContext<{
-  selected: IPage;
-  setSelected: (p: IPage) => void;
+  selected: string;
+  setSelected: (p: string) => void;
   pages: IPage[];
 }>({
-  selected: {} as IPage,
+  selected: {} as string,
   setSelected: () => { },
   pages: [],
 });
 
-export default function Main() {
-  const pages: IPage[] = pagesJson;
+export const pages: IPage[] = pagesJson;
 
-  const [selected, setSelected] = useState<IPage>(pages[0]);
+export default function Main() {
+  const [selected, setSelected] = useState<string>(pages[0].title);
 
   const isBelowMedium = useMediaQuery("(max-width:800px)");
   const isBelowLarge = useMediaQuery("(max-width:1200px)");
@@ -48,7 +48,7 @@ export default function Main() {
           flexDirection="row"
           sx={{ height: "200px", width: "100%" }}
         >
-          <MainTitle page={selected} />
+          <MainTitle pageId={selected} />
           <Divider
             color={textColor}
             variant="middle"
@@ -61,7 +61,7 @@ export default function Main() {
           />
           <MainMenu />
         </Grid>
-        <Page page={selected} />
+        <Outlet />
       </Grid>
     </SelectContext.Provider>
   );
