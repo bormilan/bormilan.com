@@ -48,7 +48,7 @@ export function Section({ section }: sectionProps) {
   const isBelowSmall = useMediaQuery("(max-width:700px)");
   const isBelowMedium = useMediaQuery("(max-width:1000px)");
 
-  const imageSize = isBelowSmall ? "100px" : "200px";
+  const imageSize = isBelowSmall ? "150px" : "200px";
   const justifyContent = isBelowSmall ? "center" : "space-between";
 
   const navigate = useNavigate();

@@ -61,7 +61,7 @@ const posts: { [name: string]: any } = {
 };
 ```
 
-Then I created a static place to strore the files, and to make the opportunity to handle the files dinamically. By this I can store the file names in my json that will be the source of the "Posts" page, and render the corresponding file when the user opens up the page of the article.
+Then I created a static place to strore the files, and to make the opportuinity to handle the files dinamically. By this I can store the file names in my json that will be the source of the "Posts" page, and render the corresponding file when the user opens up the page of the article.
 
 ```ts
 const { name } = useParams();

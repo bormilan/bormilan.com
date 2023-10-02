@@ -70,5 +70,40 @@
     "config": {
       "wrap": "mobile"
     }
+  },
+  {
+    "headline": "2023.09.30. - Quality Check with computer vision algorithms",
+    "texts": [
+      "This is my thesis project that I made back in the day.",
+      "This project was a part of a bigger production line monitoring system. This was a collaboration between my university, Budapest University of Technology and Economics and the company Knorr-Bremse.",
+      "We worked on this monitoring system together, they brought the problem and we worked on the research and development.",
+      "This specific problem was that they had a problematic step in the whole process, and they wanted to prevent the failure."
+    ],
+    "imageName": "seeger",
+    "onClick": {
+      "type": "post",
+      "index": "seeger"
+    },
+    "stamps": [
+      {
+        "type": "",
+        "text": "Computer Vision"
+      },
+      {
+        "type": "",
+        "text": "Industry 4.0"
+      },
+      {
+        "type": "",
+        "text": "Machine Learning/Deep Learning"
+      },
+      {
+        "type": "",
+        "text": "Thesis project"
+      }
+    ],
+    "config": {
+      "wrap": "mobile"
+    }
   }
 ]

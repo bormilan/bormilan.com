@@ -9,7 +9,7 @@ import contactDataJSON from "../data/contact_data.json";
 export default function SideBar() {
   const [hovered, setHovered] = useState([false, false, false, false]);
 
-  const { email, phoneNumber, location } = contactDataJSON;
+  const { email } = contactDataJSON;
 
   const handleMouseHover = (id: number, isEnter: boolean) => {
     setHovered([...hovered.slice(0, id), isEnter, ...hovered.slice(id + 1)]);

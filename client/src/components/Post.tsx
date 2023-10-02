@@ -9,10 +9,12 @@ import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { textColor } from "../static";
 import drowningDetectionMd from "../posts/DrowningDetection.md";
 import markdownWithReact from "../posts/markdownWithReact.md";
+import seeger from "../posts/seeger.md";
 
 const posts: { [name: string]: any } = {
   drowningDetection: drowningDetectionMd,
   markdownWithReact: markdownWithReact,
+  seeger: seeger,
 };
 
 export default function Post() {
