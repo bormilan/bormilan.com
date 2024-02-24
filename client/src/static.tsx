@@ -13,7 +13,7 @@ import message from "./images/message.png";
 //@ts-ignore
 import placeholder_img from "./images/placeholder.jpg";
 //@ts-ignore
-import tkProfilePicture from "./images/ipartk-340.png";
+import tkProfilePicture from "./images/profil-processed.jpeg";
 //@ts-ignore
 import projects from "./images/projects.png";
 //@ts-ignore
@@ -40,6 +40,8 @@ import dd1 from "./images/dd1.png";
 import drowning_cover from "./images/drowning_cover.png";
 //@ts-ignore
 import react_markdown_cover from "./images/react_markdown_cover.png";
+//@ts-ignore
+import beam_img from "./images/beam_img.png";
 
 import homeSectionsJson from "./data/home_sections.json";
 import aboutSectionsJson from "./data/about_sections.json";
@@ -78,6 +80,7 @@ const imageComponents: { [name: string]: any } = {
   dd1: <img src={dd1} height="100%" />,
   drowning_cover: <img src={drowning_cover} height="100%" />,
   react_markdown_cover: <img src={react_markdown_cover} height="100%" />,
+  beam_img: <img src={beam_img} height="100%" />,
 };
 
 export function getImageByName(name: string) {

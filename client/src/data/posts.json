@@ -2,9 +2,7 @@
   {
     "headline": "2023.09.17. - Project Kickoff: Drowning Detection in Lakes",
     "texts": [
-      "So Im starting a new project. This project is about to prevent people drowning in lakes.",
-      "The idea is to make a model that detects the people in the water. After the people are detected, we can track how many people are in each region of the picture.",
-      "By separating the image into small regions, we can "
+"I am starting a new project aimed at preventing people from drowning in lakes. The project involves creating a model that can detect people in the water. Once people are detected, the model will track how many people are in each region of the image. By dividing the image into smaller regions, I can monitor the movement of people more effectively."
     ],
     "imageName": "drowning_cover",
     "onClick": {
@@ -40,9 +38,7 @@
   {
     "headline": "2023.09.23. - How to render markdown files dynamically in react.ts",
     "texts": [
-      "I just made this feature to my personal web page, that I can post content the way that I need to only make a new object in my 'posts.json' and drag a markdown file into my posts folder.",
-      "I faced some problem and I didnt found a good article that covers all the information about this topic, so I came up with the idea to make my own.",
-      "If you are interested in how I implemented this, and how I solved the little frustrating problems, or/and you want to make a similar feature on  your site, enjoy this article."
+"I have added a new feature to my web page where I can post content by creating a new object in my 'posts.json' file and dragging a markdown file into the posts folder. However, I faced some problems while implementing this feature and couldn't find a good article that covered all the necessary information. So, I decided to write my article explaining how I implemented this feature and how I solved the frustrating problems. If you are interested in implementing a similar feature on your website, you can read my article and find helpful information."
     ],
     "imageName": "react_markdown_cover",
     "onClick": {
@@ -74,10 +70,7 @@
   {
     "headline": "2023.09.30. - Quality Check with computer vision algorithms",
     "texts": [
-      "This is my thesis project that I made back in the day.",
-      "This project was a part of a bigger production line monitoring system. This was a collaboration between my university, Budapest University of Technology and Economics and the company Knorr-Bremse.",
-      "We worked on this monitoring system together, they brought the problem and we worked on the research and development.",
-      "This specific problem was that they had a problematic step in the whole process, and they wanted to prevent the failure."
+"I created this thesis project in the past, as part of a larger production line monitoring system. It was a joint effort between my university, Budapest University of Technology and Economics, and the company Knorr-Bremse. The goal was to tackle a problematic step in the process and prevent potential failures. Together, we conducted research and development to create a solution for the problem."
     ],
     "imageName": "seeger",
     "onClick": {
@@ -100,6 +93,34 @@
       {
         "type": "",
         "text": "Thesis project"
+      }
+    ],
+    "config": {
+      "wrap": "mobile"
+    }
+  },
+  {
+    "headline": "2023.10.9. - How we build our software development methodology",
+    "texts": [
+"In this post, I will describe how we chose the software development methodology for our team by comparing scrum and extreme programming."
+    ],
+    "imageName": "",
+    "onClick": {
+      "type": "post",
+      "index": "sfdev_methodologies"
+    },
+    "stamps": [
+      {
+        "type": "",
+        "text": "Project Management"
+      },
+      {
+        "type": "",
+        "text": "Software Development"
+      },
+      {
+        "type": "",
+        "text": "Case Study"
       }
     ],
     "config": {

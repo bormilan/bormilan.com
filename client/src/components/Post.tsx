@@ -10,11 +10,13 @@ import { textColor } from "../static";
 import drowningDetectionMd from "../posts/DrowningDetection.md";
 import markdownWithReact from "../posts/markdownWithReact.md";
 import seeger from "../posts/seeger.md";
+import sfdev_methodologies from "../posts/sfdev-methodologies.md";
 
 const posts: { [name: string]: any } = {
   drowningDetection: drowningDetectionMd,
   markdownWithReact: markdownWithReact,
   seeger: seeger,
+  sfdev_methodologies: sfdev_methodologies,
 };
 
 export default function Post() {

@@ -2,8 +2,8 @@
   {
     "headline": "Education:",
     "texts": [
-      "I graduated at Budapest University of Technologies and Economics.",
-      "My major was Computer Engineering, and my specialization was Data Science."
+      "I graduated from Budapest University of Technology and Economics.",
+      "I studied Computer Engineering as my major, with a specialization in Data Science. I have expertise in both fields."
     ],
     "imageName": "bme",
     "config": {
@@ -22,9 +22,9 @@
   {
     "headline": "Hobbies:",
     "texts": [
-      "In my spare time a like to learn new things, like a new image processing technique, a new database or some system designing concepts. ",
-      "I played basketball for 13 years when I was young, and the love of the game remained in me. So I like to watch NBA games, analyze the data of the games and players.",
-      "I also like meeting with my friends, playing board games, camping or go to meetups."
+      "In my free time, I enjoy learning new skills such as image processing, database management, and system design.",
+      "I played basketball for 13 years when I was young. I still have a strong passion for the game, and enjoy analyzing NBA games and player statistics.",
+      "I enjoy spending time with friends, playing board games, camping, and attending meetups."
     ]
   },
   {

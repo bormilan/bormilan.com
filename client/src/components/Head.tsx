@@ -16,10 +16,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { textColor } from "../static";
+import { useNavigate } from "react-router-dom";
 
 export default function Head() {
   const isBelowMedium = useMediaQuery("(min-width:1000px)");
   const isBelow1100 = useMediaQuery("(max-width:1150px)");
+
+  const navigate = useNavigate();
 
   const quoteIndex = Math.floor(
     Math.random() * (quotesJSON.length - 1 - 0 + 1) + 0,
@@ -47,9 +50,11 @@ export default function Head() {
             </Tooltip>
           </Grid>
           <Grid sx={{ paddingRight: 2, width: "60%" }}>
-            <Typography variant="h2" color={textColor}>
-              Bór Milán
-            </Typography>
+            <div onClick={() => navigate("/main/page/Home")}>
+              <Typography variant="h2" color={textColor}>
+                Bór Milán
+              </Typography>
+            </div>
             <Typography variant="subtitle1" color={textColor}>
               Web Developer, Computer Vision Engineer
             </Typography>
@@ -141,12 +146,14 @@ export default function Head() {
               style={{ padding: 10 }}
             />
             <Grid sx={{ paddingRight: 2, width: "100%" }}>
-              <Typography
-                variant={isBelowMedium ? "h2" : "h3"}
-                color={textColor}
-              >
-                Bór Milán
-              </Typography>
+              <div onClick={() => navigate("/main/page/Home")}>
+                <Typography
+                  variant={isBelowMedium ? "h2" : "h3"}
+                  color={textColor}
+                >
+                  Bór Milán
+                </Typography>
+              </div>
               <Typography variant="subtitle2" color={textColor}>
                 Web Developer, Computer Vision Engineer
               </Typography>

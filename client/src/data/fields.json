@@ -2,9 +2,7 @@
   {
     "headline": "Computer Vision, Image Processing",
     "texts": [
-      "Computer Vision is the field that I am most interested in.",
-      "I think this is an interesting field, it has a lot of potential in it. My favorite topics are segmentation, object detection and tracking.",
-      "I made variable projects in these topics, and Im always open for consume content and discussion about this field."
+"One field that really interests me is Computer Vision. I find it fascinating because of its huge potential. My favorite topics within this field are segmentation, object detection, and tracking. I have worked on several projects related to these topics, and I am always eager to learn more and discuss this exciting field."
     ],
     "imageName": "cv",
     "config": {
@@ -14,9 +12,7 @@
   {
     "headline": "Web Development",
     "texts": [
-      "This is the field that I have the most experience.",
-      "Im working as a full stack web developer since 2021, and a have experience in various stacks. For example python-flask, .Net, React with Typescript, or GO Fiber.",
-      "Im always interested in topics related this field, and Im always open for learning new topics in it."
+"I have the most experience in the field of web development. I have been working as a web developer since 2021 and have experience in various stacks, such as Python-Flask, .NET, React with Typescript. I am always interested in topics related to this field and open to learning new topics in it."
     ],
     "imageName": "webdev",
     "config": {
@@ -27,9 +23,7 @@
   {
     "headline": "Data Science",
     "texts": [
-      "I learned data science at university and I really liked it.",
-      "I made several project, like sport analytics, web scraping and time series analysis.",
-      "I like every topic in this field, especially that topics that are more close to programming and engineering. Im not a big fan of visualization and topics like this."
+"I learned data science at university and I really enjoyed it. I completed several projects such as sports analytics, web scraping, and time-series analysis. I find every topic in this field interesting, especially those that are closely related to programming and engineering. However, I'm not a big fan of visualization and similar topics."
     ],
     "imageName": "-",
     "config": {
@@ -40,9 +34,7 @@
   {
     "headline": "Web3",
     "texts": [
-      "Im highly interested in web3 topics, but I have not much experience in it.",
-      "I made a smart contract project back in the day at university, and I highly enjoyed it.",
-      "Im always open for discussion about this field, and Im open for projects that can give me some experience."
+"I am very interested in web3 topics, although I do not have much experience in the field. I created a smart contract project during my university days, which I thoroughly enjoyed. I am always open to discussing this field and would be keen to work on projects that can help me gain more experience."
     ],
     "imageName": "-",
     "config": {
@@ -53,9 +45,7 @@
   {
     "headline": "Databases",
     "texts": [
-      "Im a big data guy, I like data science, AI and of course data storing and managing in general.",
-      "I have a lot of experience in SQL databases and in the last year I started working with NoSql databases like MongoDB or Redis.",
-      "Im really like to talk about best practices and trick about boost performance when dealing with big/unstructured data."
+"I am passionate about big data and data science, including storing and managing data in general. I have extensive experience in SQL databases and have recently started working with NoSQL databases like MongoDB or Redis. I enjoy discussing best practices and tricks to improve performance when dealing with big or unstructured data."
     ],
     "imageName": "-",
     "config": {

@@ -1,6 +1,6 @@
-# Quailty Check With Computer Vision Algorithms
+# Quality Check With Computer Vision Algorithms
 
-_2023.09.30._
+September 30, 2023
 
 ---
 
@@ -8,43 +8,39 @@ This was my thesis project, so if you want to learn more, or you want to read th
 
 ## Introduction
 
-During the manufacturing processes, critical/difficult steps appear many times, which influence the final outcome drastically. Today, so may solutions out there for these type of problems. These days there are plenty of tools and technologies avalaible, that can help us create automatic quality control for these. Given the problem, a company manufacturing break systems, wants to improve its manufacturing processes, by quality control of the installation of a Seeger ring.
+During the manufacturing processes, critical and difficult steps often occur, which can have a significant impact on the outcome. Fortunately, there are now numerous tools and technologies available to address these types of problems. In this case, a company that manufactures brake systems is looking to enhance its manufacturing processes by implementing quality control for the installation of a Seeger ring.
 
-As a solution to this, we plan to create an algorithm that works with computer vision and machine learning, running on a Rasberry Pi, which monitors the parts through it’s camera. To overcome the difficulties of the situation, a box is made for the Pi and the camera with 3D printing, in which they can be placed in the production line environment. Plus LED lighting on the camera to help take better photos.
+To tackle this issue, our proposed solution involves creating an algorithm that utilizes computer vision and machine learning. This algorithm will run on a Raspberry Pi, which will monitor the parts using its camera. To overcome the challenges posed by the production line environment, we will design a 3D-printed box to house the Pi and the camera. Additionally, LED lighting will be implemented to improve the quality of the captured photos.
 
-So overall, a fast, accurate, but above all, practical, simple, and inexpensive solution must be provided to the partner company to automate the quality assurance of this critical step.
+In summary, our goal is to provide the partner company with a fast, accurate, practical, simple, and cost-effective solution to automate the quality assurance of this critical step.
 
 ## The Problem
 
-In this project, the problem i wanted to solve, is that there was a step during an assembly, when the operator applies a ring on the top of an axis which is on the top of a spring. The problem was that, if the ring doesn't applied correctly, the spring pushes the axis up, and the product would not work safely.
+The problem I aimed to solve in this project was related to a specific step in the assembly process. During this step, the operator needed to apply a ring on top of an axis that sits on a spring. If the ring was not applied correctly, the spring would push the axis up, resulting in an unsafe product.
 
-The specificity of this problem is that, this assembling step is made under a press, so it was complicated to see the ring.
+The challenge in this problem was that the assembly step took place under a press, making it difficult to see the ring.
 
 ## Data
 
-The first task when you make a project like this, is to figure it out how to set up the camera, which angle could show the object in the best representation, how you would set up the lights and so on. I tried a few angles, and put a LED on the front of the camera to assure a good light to the environment. Here is some example from the first tries:
+The first task in a project like this is to determine how to set up the camera to capture the best representation of the object, including the angle and lighting. I experimented with various angles and added an LED to the front of the camera to ensure adequate lighting. Here is an example from the initial attempts:
 
 <center><img src="http://www.bormilan.com/seeger1.png" width="80%" height="80%"></center>
 
-If you thinks it is a good set up, you can start gathering data, that you can use for researching the possible solutions.
+If you are satisfied with this setup, you can start gathering data for researching possible solutions.
 
-My plan was to use some kind of Machine Learning based solution, so I had to create a lot of picture from the object. It is important to know that if you use a Machine Learning model, you need to put a lot of work and time into this step. Some people say this is the most important step, because the core of an ML solution is data. I agree with it because my experience confirms it, I will write the details later on this article.
+Since I planned to use a Machine Learning-based solution, I needed to create a large number of pictures of the object. It is important to note that when using a Machine Learning model, this step requires significant effort and time. Some people consider it the most crucial step because the quality of the data is essential for an ML solution. I agree with this perspective based on my own experience, which I will discuss in more detail later in this article.
 
-So I created a huge amount of data, with different angles, lights and in some cases I made the ring in a "wrong" position for the negative training data.
+Therefore, I generated a substantial amount of data, capturing the object from different angles and lighting conditions. In some cases, I intentionally placed the ring in a "wrong" position to create negative training data.
 
 ## Models
 
-At first time I thought that something classification will do the trick, so I started trying models, research what models could work in my case. I found a lot of good option, but at some point I realised what if I try a lot of them, and compare the result with each other so that I can pick the best two or three.
-
-I tried seven different models, and I used cross validation with five batches. You can see an example result below.
+When I began working on my project, I experimented with different models to find the most suitable one. I researched various options and decided to compare the results of several models to choose the best two or three. After trying out seven different models and using cross-validation with five batches, I was able to narrow down my choices. An example result is shown below.
 
 <center><img src="http://www.bormilan.com/seeger2.png" width="70%" height="70%"></center>
 
-So after the tests and the research, I picked two machine learning model, the <ins>Knn</ins> and the <ins>SVC</ins> classifiers. Besides I worked on the deep learning direction too, I tried some pre-trained <ins>neural network</ins>, but the custom network I made by myself gave the best result.
+Based on my tests and research, I selected the Knn and SVC classifiers in machine learning. I also explored deep learning and tested some pre-trained neural networks, but ultimately found that the custom network I designed myself produced the best results. To make the data compatible with the Knn and SVC classifiers, I used the HOG (Histogram of Oriented Gradients) feature descriptor to extract features from the image and convert it into one-dimensional data.
 
-I needed to convert the image, or extract the features with some algorithm to make the data compatible with the <ins>knn</ins> and <ins>SVC</ins> classifier. For this purpse, I used the [HOG](https://learnopencv.com/histogram-of-oriented-gradients/)Histogram of Oriented Gradients feature descriptor. With this I made one dimensional data from the two dimensional image.
-
-My custom network design looked like this:
+Here is a diagram of my custom network design:
 
 ```python
 def createModel():
@@ -67,50 +63,51 @@ def createModel():
        model.add(Dropout(0.5))
        model.add(Dense(4, activation='softmax'))
   return model
+
 ```
 
 ## Result
 
-Besides the fact that these models perfomed perfectly on paper, in a real environment it was awful sadly. I asked to myself why? My data is good, my models training prefectly and I have test and validation datasets too and I made a couple of other things, to prevent overfitting.
+Despite the fact that these models performed perfectly on paper, they performed poorly in a real-world environment. I asked myself, why? My data is good, my models are trained perfectly, and I have test and validation datasets. I also took several measures to prevent overfitting.
 
-The answer is that all the models are overfits. Yes. There was too much little difference between the pictures I taken under the data collecting step, and the real word environment. So I started making a ton of new image, but sadly it didnt solved the problem.
+The answer is that all the models are overfitting. Yes, there was very little difference between the pictures I took during the data collection step and the real-world environment. So, I started capturing a large number of new images, but unfortunately, it didn't solve the problem.
 
-Under the overwhelming data gathering, I realised that I can solve this problem in another way than classifying the images.
+During the extensive data gathering process, I realized that I can solve this problem in a different way rather than classifying the images.
 
 ## The Solution
 
-The idea was to detect the two key points of the ring, and then measure the distance between the two detected points.
+The goal was to detect the two key points of the ring and measure the distance between them.
 
 ### Object Detection
 
-So the first task was to make a detection trained to detect the two specific points of the ring. I remembered that we made a simple face detection model at one of the classes I had, so I started implementing that algorithm.
+The first step was to create a detection algorithm trained specifically for detecting the two points of the ring. I remembered that we had created a simple face detection model in one of my classes, so I started implementing a similar algorithm.
 
-In this solution, I used a the Knn classifier to classify each region of the image. So I made a "sliding window" algorithm that iterates through the image pixels and classifies every region if that region is the object we want to find. Here you can see how the detection developed through the process:
+For this solution, I used a K-nearest neighbors (Knn) classifier to classify each region of the image. I developed a "sliding window" algorithm that iterates through the image pixels and classifies each region to determine if it contains the desired object. The image below shows the progress of the detection process:
 
 <center><img src="http://www.bormilan.com/seeger3.png" width="80%" height="80%"></center>
 
-I think its a really good result, and I find interesting and awesome that you can make complex things like object detection, with just "simple" machine learning models and proper data preparation, without any convolutional neural network.
+I believe the results are quite good, and I find it interesting and impressive that we can achieve complex tasks like object detection using "simple" machine learning models and proper data preparation, without needing a convolutional neural network.
 
-As you can see on the picture, the final solution makes multiply detections still. The most popular method to solve this, to pick the best and throw the other detections away. I made something else, because I felt that was easier in this case.
+As you can see in the picture, the final solution still produces multiple detections. The most common approach to address this is to select the best detection and discard the others. However, in this case, I decided to take a different approach that I found easier.
 
-I calculated a center point from the mean of each detection rectangle center point. With this, I made a good and simple method that allows to the detection model to make multiply detections.
+I calculated a center point based on the mean of the center points of each detection rectangle. This allowed me to develop a simple and effective method that allows the detection model to produce multiple detections.
 
 ### Distance Measurement
 
-Atfer the succesfull detection, I had two coordinate pairs about the two key points of the ring.
+After successfully detecting the ring's key points, I obtained two pairs of coordinates.
 
-There are several distance measurement method out there, and every one of them has its ups and downs. I stated using the simple euclidean distance metric, because thats the most popular one, every one of us learned it at highschoolthats the most popular one, every one of us learned it at highschool. It was good, but not perfect. I realised that the vertical distance is important in these cases, so I switched to the manhattan metric. It was the best idea, the results were just perfect.
+There are several methods for measuring distance, each with its own strengths and weaknesses. I initially used the simple Euclidean distance metric, as it is the most popular and widely taught in high school. While it was good, it wasn't perfect. I realized that the vertical distance is important in these cases, so I switched to the Manhattan metric. This turned out to be the best choice, as the results were nearly perfect.
 
-I had three bad and six good test images, you can see the distance results in a table with each metric.
+I tested the solution with three bad and six good images. The table below shows the distance results using each metric:
 
 <center><img src="http://www.bormilan.com/seeger4.png" width="70%" height="70%"></center>
 
-In the two rows that I marked with the red rectangles, you can see how the manhattan metric increased some of the good cases and separated the good from the bad, better that the euclidean.
+In the two rows marked with red rectangles, you can see how the Manhattan metric improved some of the good cases and better distinguished them from the bad cases compared to the Euclidean metric.
 
 ## Conclusion
 
-I made a lot of progress with image classification, and Im not saying that direction was bad, but I think the other direction is better in my point of view. I think with the detection + distance measurement needs fewer training data, and its more reliable at the end of the day. Im saying this, because the distance measurement is just a pure mathematical method, so its consistent. The only way this solution can make a wrong result, is that if the detection make a false detection.
+I have made significant progress with image classification, and while I don't believe the direction I initially took was necessarily bad, I personally think the alternative direction is superior. In my opinion, using detection combined with distance measurement requires less training data and provides more reliable results in the end. I say this because distance measurement is purely mathematical, making it consistent. The only way this solution can yield incorrect results is if the detection itself produces a false positive.
 
-I think my detection model performed good enough, but later I trained a [Yolo](https://pjreddie.com/darknet/yolo/) model to detect the two key points of the ring, and it was perfect and a lot faster than my custom detector.
+I am satisfied with the performance of my detection model, but later on, I trained a [Yolo](https://pjreddie.com/darknet/yolo/) model to detect the two key points of the ring. It performed flawlessly and was much faster than my custom detector.
 
-I made a good solution for this problem in my opinion. It was super fun and interesting to working on, this project made me like the field of research and development.
+Overall, I believe I have found a good solution for this problem. Working on this project has been incredibly enjoyable and stimulating, and it has cultivated my interest in the field of research and development.

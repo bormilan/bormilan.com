@@ -2,14 +2,14 @@
   {
     "headline": "Quality Check With Computer Vision Algorithms",
     "texts": [
-      "This is my thesis project. I am very proud of the outcome of this, because this was a real problem that was needed to solve, and it was a really hard challenge.",
-      "The goal of this project was to make a solution for a specific problem during a manufacturing process.",
-      "My team developed a production line monitoring system. We used Raspberry Pi 4 boards with camera, to take images and real time video stream from the manufacturing processes, and processed the images and the stream to convert them into useful data.",
-      "The main goal was to monitoring the processes and store the events in a database, for the purpose of optimization.",
-      "And there was my part, an extra feature to check a specific operation and detect if the process failed, before it causes more problems."
+      "As part of my thesis project, I am proud to have developed a solution to a difficult problem faced during manufacturing processes. Our team created a production line monitoring system that utilized Raspberry Pi 4 boards equipped with cameras to capture real-time images and video streams of the manufacturing processes. We then processed this data to convert it into useful information, which was stored in a database for optimization purposes.",
+      "My particular contribution to the project was an extra feature that checked for specific operations and detected any process failures before they could cause further issues. Overall, our goal was to monitor the processes and track events to improve efficiency and productivity."
     ],
     "imageName": "seeger",
-    "onClick": "",
+    "onClick": {
+      "type": "link",
+      "index": "https://storage.googleapis.com/www.bormilan.com/Bo%CC%81rMila%CC%81n_szakdolgozat.pdf"
+    },
     "stamps": [
       {
         "type": "",
@@ -39,17 +39,16 @@
   {
     "headline": "Consumption Meter",
     "texts": [
-      "The need for this project was caused by the high prices of the water, electricity and gas. The goal was to make a system for storing consumption data, for the purpose of saving.",
-      "We came up with a solution that placing small and cheap detectors on the top of the water(etc.) meters, and read the number plate with computer vision and image processing.",
-      "The process looks like this: the user buys a detector, applies to their clock, and adds the detector by its ID, on the client side of our program. After this he/she/it just need to set the configuration values, and then the detector can start detecting the numbers.",
-      "The detector sends an image to our backend, and then it processes the image to get the numbers from it, with an OCR model, and the it stores to our database(mongoDB).",
-      "The client has a lot of features to help the user get the most valuable information from the data.",
-      "Our plan, is to make a dashboard that is customizable by the user. Making a mobile application to afford the possibility to make the images with phone And we want to make a lot of features that supports those people who has multiply property to monitor the consumption of their renters."
+      "The motivation behind this project was the high prices of water, electricity, and gas. We aimed to develop a system for storing consumption data to help people save money.",
+      "We came up with a solution that involves placing small and inexpensive detectors on top of water and other meters. These detectors use computer vision and image processing to read the number plates.",
+      "Here's how it works: the user buys a detector, attaches it to their meter, and adds the detector's ID to our program on the client side. After this, they just need to configure the detector, and it can start detecting numbers.",
+      "The detector sends an image to our backend, where an OCR model processes the image to extract the numbers. The numbers are then stored in our MongoDB database.",
+      "Our program has many features to help users get the most valuable information from their data. We plan to create a customizable dashboard for users and a mobile application that allows them to take images with their phones. We also want to add features that support people who own multiple properties and need to monitor the consumption of their renters."
     ],
     "imageName": "cm_img",
     "onClick": {
       "type": "link",
-      "index": ""
+      "index": "https://cm.balintdaniel.com"
     },
     "stamps": [
       {
@@ -82,11 +81,46 @@
     }
   },
   {
+    "headline": "beamLive",
+    "texts": [
+      "During my recent project, I was responsible for developing the client-side of a chat-based application. My initial task was to replicate the design of the old application, and then adjust the panel according to the client's requirements. The platform featured nested menu elements, along with windows that could contain components or child windows. I developed it using React with Typescript and used two component libraries, Material UI and Syncfusion."
+    ],
+    "imageName": "beam_img",
+    "onClick": {
+      "type": "link",
+      "index": "https://beam.live"
+    },
+    "stamps": [
+      {
+        "type": "",
+        "text": "React"
+      },
+      {
+        "type": "",
+        "text": "Typescript"
+      },
+      {
+        "type": "",
+        "text": "Json"
+      },
+      {
+        "type": "",
+        "text": "mqtt"
+      },
+      {
+        "type": "",
+        "text": "Redis"
+      }
+    ],
+    "config": {
+      "wrap": "mobile"
+    }
+  },
+  {
     "headline": "Document Storing Database, with Web Scraping",
     "texts": [
-      "This was my firs ever freelance project that I worked on with my friend. We did this project for a German company, to improve their data processing. ",
-      "The goal was to scrape the fresh data form their old website, to store in my a new, for the purpose of making efficient queries and to serve a new client application that implements a lot of good features that speeds ups their everyday work.",
-      "This was a good first project that taught me how to work with big data, how to download data through RSS feed, and make an automatic cron job to make it every day. A got familiar with backend development, practical data processing and in general how things work on a real life project."
+      "I worked on my very first freelance project with a friend. We were hired by a German company to improve their data processing. Our goal was to scrape fresh data from their old website, store it in a new database, and create an efficient query system. We also built a new client application that included many useful features to speed up their everyday work.",
+      "This project was a great learning experience for me. I gained knowledge in working with big data, downloading data via RSS feeds, and creating automatic cron jobs to fetch data daily. I also became familiar with backend development, and practical data processing, and learned how to work on a real-life project."
     ],
     "imageName": "",
     "onClick": "",
@@ -115,8 +149,7 @@
   {
     "headline": "Online Platform for Craft Events",
     "texts": [
-      "This project was a startup that I worked for as a backend developer. I joined the team after the MVP, so it was a good experience in working on an existing project and catch up the code.",
-      "I made bug fixes, and several new features. These are new user type who can advertise their events(like sellers on Fiverr), refund feature with option to refund just a specific numbers of registration(e.g. registered 4 people but 2 of them wants to cancel it), automatic e-mail sending, and several smaller tasks."
+      "As a backend developer, I worked for a startup that had already launched their MVP. My role was to fix bugs and add new features to the existing codebase. During my time there, I added several new features, including a new user type that could advertise their events, similar to how sellers on Fiverr promote their services. I also implemented a refund feature that allowed customers to cancel only specific registrations instead of the entire order. Additionally, I automated email sending and completed several other tasks to improve the project's overall functionality."
     ],
     "imageName": "marminalunk",
     "onClick": "",
@@ -149,8 +182,7 @@
   {
     "headline": "NBA Data Analysis",
     "texts": [
-      "I gathered the data from the official nba site, with a wrapper called nba_api. The goal was to find information in the statistics, and make insights to make more profit in betting.",
-      "I made team comparisons to help decide what team should I pick to win the game. I made single team analysis to see the team overall statistics(sum of points, rebounds, assists etc). And I made player analysis too to see the player’s stats."
+      "I extracted data from the official NBA website using a wrapper called 'nba_api'. My objective was to gather insights from the statistics available and use them to make more informed bets. I compared teams to decide which one to select for winning the game. I also conducted a single-team analysis to see their overall statistics, including points, rebounds, assists, and more. Additionally, I performed player analysis to examine individual player statistics."
     ],
     "imageName": "",
     "onClick": "",

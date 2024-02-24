@@ -2,12 +2,12 @@
   {
     "headline": "An introduction about me",
     "texts": [
-      "In this section, you can read about my career, my life and overall about me."
+      "This section is all about me - my career, my personal life, and everything in between. So, buckle up and get ready to learn about what makes me who I am."
     ],
     "imageName": "tkProfilePicture",
     "onClick": {
       "type": "page",
-      "index": "1"
+      "index": "AboutMe"
     },
     "config": {
       "wrap": "mobile"
@@ -16,12 +16,12 @@
   {
     "headline": "A list of my projects",
     "texts": [
-      "In this section you can see my selected project that I am proud of."
+      "Here is a list of my selected projects that I am proud of."
     ],
     "imageName": "projects",
     "onClick": {
       "type": "page",
-      "index": "2"
+      "index": "Projects"
     },
     "config": {
       "wrap": "mobile"
@@ -30,12 +30,12 @@
   {
     "headline": "Which fields am I interested in ?",
     "texts": [
-      "This section covers all the fields I have experience in it, and some fields that I am interested but not worked in yet."
+      "This section covers my experience and interests."
     ],
     "imageName": "fields",
     "onClick": {
       "type": "page",
-      "index": "3"
+      "index": "Fields"
     },
     "config": {
       "wrap": "mobile"
@@ -44,12 +44,12 @@
   {
     "headline": "Posts written by me.",
     "texts": [
-      "This is a blog page, I am enjoy exploring new things and digging deep into them, so I started writing about them, so why not to post ?"
+      "This is a blog page. I enjoy exploring new things and writing about them. Why not share my findings?"
     ],
     "imageName": "posts",
     "onClick": {
       "type": "page",
-      "index": "4"
+      "index": "Posts"
     },
     "config": {
       "wrap": "mobile"

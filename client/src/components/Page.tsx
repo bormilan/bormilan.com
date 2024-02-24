@@ -62,7 +62,7 @@ export function Section({ section }: sectionProps) {
       return undefined;
     }
     if (section.onClick.type === "page") {
-      navigate(`/pages/${section.onClick.index}`);
+      navigate(`/main/page/${section.onClick.index}`);
     } else if (section.onClick.type === "post") {
       navigate(`/post/${section.onClick.index}`);
     } else if (section.onClick.type === "link") {
