@@ -42,6 +42,8 @@ import drowning_cover from "./images/drowning_cover.png";
 import react_markdown_cover from "./images/react_markdown_cover.png";
 //@ts-ignore
 import beam_img from "./images/beam_img.png";
+//@ts-ignore
+import my_setup from "./images/my_setup.png";
 
 import homeSectionsJson from "./data/home_sections.json";
 import aboutSectionsJson from "./data/about_sections.json";
@@ -81,6 +83,7 @@ const imageComponents: { [name: string]: any } = {
   drowning_cover: <img src={drowning_cover} height="100%" />,
   react_markdown_cover: <img src={react_markdown_cover} height="100%" />,
   beam_img: <img src={beam_img} height="100%" />,
+  my_setup: <img src={my_setup} height="100%" />,
 };
 
 export function getImageByName(name: string) {

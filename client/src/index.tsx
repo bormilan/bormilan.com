@@ -13,6 +13,7 @@ import ErrorIcon from "@mui/icons-material/Error";
 import Main from "./components/Main";
 import Post from "./components/Post";
 import Page from "./components/Page";
+import WebChat from "./components/WebChat"
 
 export class DetailedError extends Error {
   override name: "DetailedError" = "DetailedError";

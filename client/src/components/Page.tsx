@@ -78,6 +78,7 @@ export function Section({ section }: sectionProps) {
         style={{
           flexWrap: wrap as "wrap" | "nowrap",
           justifyContent: justifyContent,
+          alignItems: "flex-start",
         }}
       >
         <Grid display="flex" flexDirection={"column"}>

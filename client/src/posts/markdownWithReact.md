@@ -162,3 +162,5 @@ And if all set up, you can give the <ins>ReactMarkdown<ins> component on the <in
 
 There are a lot of useful plugins you can use to improve your markdown renderer. Here is the github repo of the package, you can find everythin here:
 [https://github.com/remarkjs/react-markdown#use](https://github.com/remarkjs/react-markdown#use)
+
+If you have any suggestions, or if you are a UI/UX expert, feel free to contact me about how should I make a better UI for my page, especially for the markdown content.

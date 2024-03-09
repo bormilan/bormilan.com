@@ -11,12 +11,14 @@ import drowningDetectionMd from "../posts/DrowningDetection.md";
 import markdownWithReact from "../posts/markdownWithReact.md";
 import seeger from "../posts/seeger.md";
 import sfdev_methodologies from "../posts/sfdev-methodologies.md";
+import my_setup from "../posts/my-setup.md"
 
 const posts: { [name: string]: any } = {
   drowningDetection: drowningDetectionMd,
   markdownWithReact: markdownWithReact,
   seeger: seeger,
   sfdev_methodologies: sfdev_methodologies,
+  my_setup: my_setup
 };
 
 export default function Post() {

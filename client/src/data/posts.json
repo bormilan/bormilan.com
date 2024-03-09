@@ -126,5 +126,37 @@
     "config": {
       "wrap": "mobile"
     }
+  },
+  {
+    "headline": "2024.02.28. - My Setup",
+    "texts": [
+"In this post, I will show my currently used environment for programming."
+    ],
+    "imageName": "my_setup",
+    "onClick": {
+      "type": "post",
+      "index": "my_setup"
+    },
+    "stamps": [
+      {
+        "type": "",
+        "text": "setup"
+      },
+      {
+        "type": "",
+        "text": "guide"
+      },
+      {
+        "type": "",
+        "text": "tmux"
+      },
+      {
+        "type": "",
+        "text": "nvim"
+      }
+    ],
+    "config": {
+      "wrap": "mobile"
+    }
   }
 ]
